@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--Script source for VUE-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script type="module">
+        const {createApp} = Vue 
+        const myApp = createApp ({
+            data(){
+                return{
+                    Subject1: {
+                        subject : "Computer Science",
+                        location: "Hendon Campus",
+                        price: 10,
+                        img: "iconComputerScience.webp"
+                    }
+                }
+            }
+        })
+        myApp.mount("#subj1")
+    </script>
+
+    <div id="subj1">
+        <h1>{{ Subject1.subject}}</h1>
+        <h2>{{ Subject1.location}}</h2>
+        <h3>Price: {{ Subject1.price}}£</h3>
+        <img :src="Subject1.img" alt="img icon" width="300">
+    </div>
+
+
+
+
+    <div id="app">
+
+    </div>
+</body>
+</html>
